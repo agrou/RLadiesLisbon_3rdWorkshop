@@ -1,0 +1,25 @@
+## Variable assignment
+
+<img src="Images/VariableAssignment.png" style="width: 500px;"/>
+
+---
+
+## Variable assignment
+
+Assign values to variables, to access them later:
+```{r}
+x <- 5 + 7
+```
+
+To view a variable's content, we must type its name:
+```{r}
+x
+```
+
+Alternative -- to enclose the expression with ():
+```{r}
+(x <- 5 + 7)
+```
+
+
+

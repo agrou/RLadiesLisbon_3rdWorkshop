@@ -1,0 +1,49 @@
+## Vectors
+
+<img src="Images/CreatingVectors.png" style="width: 500px;"/>
+
+--- 
+
+## Vectors
+
+Using c() to concatenate values:
+```{r}
+(vec <- c(2, 4, 6))
+```
+Using a simple sequence:
+```{r}
+(vec <- 2:6)
+```
+
+--- 
+
+## Vectors
+
+Using seq(), for a sequence with steps 0.5:
+```{r}
+(vec <- seq(2,3, by = 0.5))
+```
+
+---
+
+## Vectors
+
+Repeating a sequence:
+```{r}
+(vec <- rep(1:2, times = 3))
+```
+Repeating each value in a sequence:
+```{r}
+(vec <- rep(1:2, each = 3))
+```
+
+--- 
+
+## Vectors
+
+Accessing vector elements:
+```{r}
+vec <- c(2,4,6)
+vec[1]
+```
+

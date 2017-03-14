@@ -1,0 +1,14 @@
+## Data structures
+
+### Data structures are ensembles of simple data types
+
+* Vector (1-dim):
+  + all elements have the same type
+* Matrix (2-dim): 
+  + all elements have the same type
+* Data frame (2-dim):
+  + each column can have a different data type
+* Lists (2-dim), less used:
+  + each column can have different data type
+  + each column can have different length
+  + not covered in this workshop

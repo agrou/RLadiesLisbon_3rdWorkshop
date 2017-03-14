@@ -1,0 +1,52 @@
+## Matrixes
+
+<img src="Images/Matrices.png" style="width: 500px;"/>
+
+---
+
+## Matrixes
+
+Multidimension structures that can have only 1 data type.
+
+Creating a new matrix:
+```{r}
+(m <- matrix(1:9, nrow = 3, ncol = 3))
+```
+
+---
+
+## Matrixes
+
+Accessing elements of a matrix:
+```{r}
+m[2, ] # Accessing a row
+m[ ,1] # Accessing a column
+m[2,3] # Accessing an elements
+```
+
+---
+
+## Matrixes
+
+Operations with matrices:
+```{r}
+t(m) # Transposed of a matrix
+```
+
+---
+
+## Matrixes
+
+Operations with matrices:
+```{r}
+m*m # Element-by-element multiplication
+```
+
+---
+
+## Matrixes
+
+Operations with matrices:
+```{r}
+m %*% m # Matrix multiplication
+```

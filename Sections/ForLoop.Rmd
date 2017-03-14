@@ -1,0 +1,28 @@
+## For loop
+
+### Perform a task a for a certain number of values
+
+<img src="Images/ForLoop.png" style="width: 400px;"/>
+
+---
+
+## For loop
+
+```{r}
+for(i in 1:4){
+  
+  j <- i + 10
+  print(j)
+  
+}
+```
+
+---
+
+## For loop
+```{r}
+for (year in c(2010,2011,2012,2013,2014,2015)){
+  print(paste("The year is", year))
+}
+```
+

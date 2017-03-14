@@ -1,0 +1,42 @@
+## Lists
+
+<img src="Images/Lists.png" style="width: 500px;"/>
+
+---
+
+## Lists
+
+Lists are multidimensional structures that can have:
+
+* different types in each column
+* columns of different lengths
+```{r}
+(l <- list(x = 1:5, y = c('a','b')))
+```
+
+---
+
+## Lists
+
+Alternative ways to access elements of a list:
+
+* By numerical index - requires **double brackets** (single brackets returns another list):
+```{r}
+l[[2]]
+l[[2]][[1]]
+l[1] # New list with only first element
+```
+
+---
+
+## Lists
+
+Alternative ways to access elements of a list:
+
+* By column name:
+```{r}
+l$y
+l$y[1]
+l[['y']]
+```
+

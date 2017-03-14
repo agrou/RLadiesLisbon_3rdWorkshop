@@ -1,0 +1,9 @@
+## Control statements
+
+### Programming takes advance of computers to perform repetitive tasks.
+
+### Control statements:
+
+* Perform a task under certain conditions (if-else)
+* Repeat a task while a condition holds (while)
+* Repeat a task for a certain range of values (for)

@@ -1,0 +1,56 @@
+## Conditional statement if-else
+
+### Perform a task IF a condition holds
+
+<img src="Images/IfStatement.png" style="width: 400px;"/>
+
+---
+
+## Conditional statement if-else
+
+<img src="Images/Conditions.png" style="width: 1000px;"/>
+
+Common mistake: to use *=* instead of *==*
+
+```{r}
+i <- 4
+if (i == 4){
+  print('Yes')
+} else {
+  print('No')
+}
+```
+
+
+---
+
+## Conditional statement if-else
+
+### Boolean operators & (AND), | (OR), ! (NOT), xor (exclusive OR)
+
+<img src="Images/MoreConditions.png" style="width: 800px;"/>
+
+Common mistakes:
+
+* To use || instead of | (and to use && instead of &)
+
+---
+
+## Conditional statement if-else
+
+```{r}
+i <- 4
+j <- 5
+if(i > 3 & i == j){
+  print('Everything\'s true')
+} else {
+  print('Not everything\'s true')
+}
+
+if(i > 3 | i == j){
+  print('At least one is true')
+} else {
+  print('None is true')
+}
+```
+

@@ -1,0 +1,30 @@
+## Functions
+
+### Functions encapsulate a task into a single line of code
+
+### Why using functions?
+
+* Code reuse: when you keep using the same piece of code.
+* Readibility: if code becomes long, need to break it down into several functions.
+* Focus: every class or function should do only one specific task.
+
+---
+
+## Functions
+
+<img src="Images/Functions.png" style="width: 400px;"/>
+
+---
+
+## Functions
+
+```{r}
+myFunction <- function(input_argument){
+  
+  cube <- input_argument*input_argument*input_argument
+  return(cube)
+}
+
+print(myFunction(2))
+```
+
