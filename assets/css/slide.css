@@ -1,0 +1,45 @@
+
+.title-slide {
+  background-color: #FFFFFF;
+}
+
+.title-slide hgroup > h1{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+   color: #88398A important;
+}
+
+.title-slide hgroup > h2 {
+  font-family: 'Fira Sans', 'verdana', 'Helvetica', 'Open Sans';
+}
+
+slide article h2, 
+slide hgroup h2 {
+  font-size: 22px;
+  color: #88398A important!;
+}
+
+/* Fonts and Spacing */
+article p, article li, article li.build, section p, section li{
+  font-family: 'verdana', 'Amarath', 'Fira Sans', 'Open Sans','Helvetica', 'Crimson Text', 'Garamond',  'Palatino', sans-serif;
+  text-align: justify;
+  font-size:28px;
+  line-height: 1.5em;
+}
+
+aside.gdbar {
+  height: 120px;
+  width: 315px;
+  background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(100%, #ffffff)) no-repeat;
+  background: -webkit-linear-gradient(left, #ffffff, #ffffff) no-repeat;
+  background: -moz-linear-gradient(left, #ffffff, #ffffff) no-repeat;
+  background: -o-linear-gradient(left, #ffffff, #ffffff) no-repeat;
+  background: -ms-linear-gradient(left, #ffffff, #ffffff) no-repeat;
+  background: linear-gradient(left, #ffffff, #ffffff) no-repeat;
+}
+
+aside.gdbar img {
+  width: 275px;
+  height: auto;
+}
+
+
