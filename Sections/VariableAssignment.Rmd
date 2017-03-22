@@ -1,0 +1,23 @@
+## Atribuir valores a variáveis
+
+<img src="Images/VariableAssignment.png" style="width: 500px;"/>
+
+---
+
+## Atribuir valores a variáveis
+
+Armazenar valores em variáveis:
+```{r}
+Title <- "The Godfather"
+```
+
+Para ver o conteúdo de uma variável, devemos escrever o nome dela:
+```{r}
+Title
+```
+
+### Exercício 2
+```{r}
+# Criar a variável "genre" com o valor "Drama"
+
+```
