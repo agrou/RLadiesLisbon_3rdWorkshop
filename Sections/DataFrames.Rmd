@@ -1,0 +1,127 @@
+## Dataframes
+
+<img src="Images/DataFrames.png" style="width: 450px;"/>
+
+---
+
+## Dataframes
+
+Estruturas multidimensionais usadas para armazenar bases de dados (Excel style):
+```{r}
+df <- data.frame(x = 1:3, y = c('a','b','c'))
+df
+```
+
+Uma dataframe pode ser interpretada como:
+
+* uma lista onde todas as colunas têm a mesma altura
+* uma matriz onde 
+  + cada coluna tem um nome
+  + diferentes colunas têm diferentes tipos de dados.
+
+---
+# Exercício 5
+```{r, eval = FALSE}
+# completar a data frame e atribuir-lhe o nome "Filmes"
+data.frame(ID = 1:6, Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien", ""))
+
+```
+
+---
+
+## Dataframes
+
+### Aceder a elementos de uma data frame
+
+* Aceder por índice:
+```{r}
+Filmes[2,2]
+```
+
+* Aceder por nome da variável/coluna:
+```{r}
+Filmes$Title
+```
+
+---
+
+## Dataframes
+
+### Descobrir mais sobre uma dataframe
+```{r}
+nrow(Filmes) # Número de observações/linhas
+ncol(Filmes) # Número de variáveis/colunas
+dim(Filmes) # Número de linhas e colunas
+```
+
+---
+
+## Dataframes
+
+### Visualizar a dataframe
+```{r}
+head(Filmes) # Ver as primeiras 6 observações
+head(Filmes, 3) # Ver apenas 3 observações
+View(Filmes) # Ver a dataframe completa
+```
+
+---
+
+## Dataframes
+
+### Concatenar dataframes
+```{r}
+cbind(df,z=c(6,7,8)) # adicionar mais uma variável
+rbind(df,c(10,'a')) # adicionar mais uma observação
+```
+
+# Exercício 6
+```{r, eval = FALSE}
+# Visualizar a data frame Filmes com o comando 'head'
+
+# Adicionar uma nova observação à dataframe Filmes com valores à escolha e atribuir o nome 'Filmes_Alt'
+Filmes_Alt <-
+
+```
+
+---
+
+## Dataframes
+
+### Mais avançado: data.frame vs data_frame (tidyverse)
+
+A função base data.frame transforma colunas em factors
+
+```{r}
+df1 <- data.frame(x = 1:3, y = c('a','b','c'))
+df1
+```
+
+---
+
+## Dataframes
+
+A função base data.frame transforma colunas em factors, o que pode representar um problema ao adicionar um novo valor
+```{r}
+rbind(df1, c(4,'z'))
+```
+
+
+---
+
+## Dataframes
+
+
+```{r, message=FALSE}
+library(tidyverse)
+df2 <- data_frame(x = 1:3, y = c('a','b','c'))
+df2
+```
+
+---
+
+## Dataframes
+
+```{r}
+rbind(df2, c(4,'z'))
+```
