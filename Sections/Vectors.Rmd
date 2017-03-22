@@ -1,0 +1,91 @@
+## Vectores
+
+<img src="Images/CreatingVectors.png" style="width: 500px;"/>
+
+--- 
+
+## Vectores
+
+Usar c() para concatenar valores:
+```{r}
+Title <- c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien")
+```
+
+```{r}
+Title
+```
+
+
+Usar sequências:
+```{r}
+ID <- 1:10
+```
+
+```{r}
+ID
+```
+
+--- 
+
+## Vectores
+
+Usar seq() para uma sequência com intervalos de 5:
+```{r}
+Duration <- seq(170, 190, by = 5)
+```
+
+```{r}
+Duration
+```
+
+---
+
+## Vectores
+
+Criar uma sequência com repetição:
+```{r}
+Rating <- rep(10, times = 5)
+```
+
+```{r}
+Rating
+```
+
+
+Repetir cada valor numa sequência:
+```{r}
+Rating <- rep(c(1, 5, 3), each = 3)
+```
+
+```{r}
+Rating 
+```
+
+--- 
+
+## Vectores
+
+Aceder a elementos de um vector:
+```{r}
+Genre <- c("Drama", "Action", "Musical", "Comedy", "Sci-Fi")
+Genre[1]
+```
+
+Exercício 3:
+```{r}
+# Criar vector For18Plus com valores de TRUE or FALSE, na ordem da tabela
+
+```
+
+Exercício 4:
+```{r}
+# Criar vector "Class" com a sequência de valores "Bom", "Mau", "Mehh", repetida 2 vezes
+
+```
+
+Exercício 5:
+```{r}
+# Aceder à classificação (variável "Class") do filme "La La Land" 
+
+```
+
