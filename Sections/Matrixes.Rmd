@@ -1,0 +1,53 @@
+## Matrizes
+
+<img src="Images/Matrices.png" style="width: 500px;"/>
+
+---
+
+## Matrizes
+
+Estruturas multidimensionais que assumem apenas 1 tipo de dados
+
+Criar matriz:
+```{r}
+m <- matrix(1:6, nrow = 6, ncol = 6)
+m
+```
+
+---
+
+## Matrizes
+
+Aceder a elementos da matriz:
+```{r}
+m[2, ] # Aceder a uma linha
+m[ ,1] # Aceder a uma coluna
+m[2,3] # Aceder a um elemento
+```
+
+---
+
+## Matrizes
+
+Operações com matrizes:
+```{r}
+t(m) # Transposição dos elementos da matriz
+```
+
+---
+
+## Matrizes
+
+Operações com matrizes:
+```{r}
+m*m # Multiplicação elemento a elemento
+```
+
+---
+
+## Matrizes
+
+Operations with matrices:
+```{r}
+m %*% m # Multiplicação entre matrizes
+```
