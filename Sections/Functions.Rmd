@@ -1,0 +1,63 @@
+## Funções
+
+### As funções englobam uma tarefa numa única linha de código
+
+
+### Funções para quê?
+
+* "Reciclar" código: Quando estamos continuamente a usar o mesmo código
+* Compreensão: Se o código se tornar demasiado longo devemos dividi-lo em várias funções
+* Foco: Cada função deve desempenhar apenas uma tarefa específica
+
+---
+
+## Funções
+
+<img src="Images/Functions.png" style="width: 400px;"/>
+
+---
+
+## Funções
+
+```{r}
+myFunction <- function(input_argument){
+  
+  cube <- input_argument*input_argument*input_argument
+  return(cube)
+}
+
+print(myFunction(2))
+```
+
+## Múltiplas condições
+```{r}
+myFunction <- function(input_argument){
+  
+  if(this) {
+    # do that
+    } else if (that) {
+    # do something else
+    } else {
+    #
+    }
+}
+```
+
+## Exemplo: Escolher um filme 
+```{r}
+FilmeOk <- function(Nome_Filme){
+  
+  Filme <- Filmes[Filmes$Title == Nome_Filme,]
+
+  if(Filme$Rating < 6.3) {
+    print("Má escolha")
+
+    } else {
+    print("Boa escolha")
+    }
+}
+
+FilmeOk("The Godfather")
+```
+
+
