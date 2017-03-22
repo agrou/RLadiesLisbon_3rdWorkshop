@@ -1,0 +1,53 @@
+## Tipos de dados 
+
+* Logical (TRUE or FALSE)
+* Character ("a", "apple", ...)
+* Numeric: 
+  + integer (-1, 0, 1, 2, ...)
+  + double (3.14, -2.0, ...)
+
+---
+
+
+## Exemplo de base de dados simples
+
+| ID | Title            |  Genre    | Duration  | Rating  | For18Plus |
+| -- | ---------------- |---------- | --------- | ------  | --------- |
+| 1  | "The Godfather"  | "Drama"   | 175       | 9.2     | TRUE      |
+| 2  | "The Terminator" | "Action"  | 107       | 8.0     | FALSE     |
+| 3  | "La La Land"     | "Musical" | 128       | 8.4     | FALSE     |
+| 4  | "Ghostbusters"   | "Comedy"  | 105       | 7.8     | FALSE     |
+| 5  | "Alien"          | "Sci-Fi"  | 117       | 8.5     | TRUE      |
+
+```{r, echo = FALSE}
+Filmes <- data.frame(ID = 1:6, Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien", ""), Genre = c("Drama", "Action", "Musical", "Comedy", "", "Sci-Fi"), Duration = c(175, 107, 128, 105, "", 107), Rating = c(9.2, 8.0, 8.4, 7.8, 6.1, 6.7), For18Plus = c("TRUE", "FALSE", "FALSE", "FALSE", "TRUE", "FALSE"))
+Filmes
+```
+
+---
+
+## Tipos de dados
+
+A tabela possui diferentes tipos de dados:
+
+* Title - character
+* Genre - factor 
+* Duration - integer
+* Rating - double
+* For18Plus - double
+
+(adicionar exemplos com caixinhas)
+
+---
+
+## Tipos de dados
+
+```{r}
+typeof(Genre)
+```
+
+```{r}
+class(Genre)
+```
+
+
