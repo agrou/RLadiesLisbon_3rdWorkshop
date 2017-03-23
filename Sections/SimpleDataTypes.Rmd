@@ -50,4 +50,7 @@ typeof(Duration)
 class(Duration)
 ```
 
+```{r}
+str(Duration)
+```
 
