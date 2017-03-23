@@ -1,25 +1,17 @@
-## Variable assignment
+## Atribuir valores a variáveis
 
-<img src="Images/VariableAssignment.png" style="width: 500px;"/>
-
----
-
-## Variable assignment
-
-Assign values to variables, to access them later:
+Armazenar valores em variáveis:
 ```{r}
-x <- 5 + 7
+Title <- "The Godfather"
 ```
 
-To view a variable's content, we must type its name:
+Para ver o conteúdo de uma variável, devemos escrever o nome dela:
 ```{r}
-x
+Title
 ```
 
-Alternative -- to enclose the expression with ():
+### Exercício 2
 ```{r}
-(x <- 5 + 7)
+# Criar a variável "genre" com o valor "Drama"
+
 ```
-
-
-

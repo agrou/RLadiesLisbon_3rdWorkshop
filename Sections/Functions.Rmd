@@ -1,22 +1,16 @@
-## Functions
+## Funções
 
-### Functions encapsulate a task into a single line of code
+As funções englobam uma tarefa numa única linha de código
 
-### Why using functions?
+Utilidade das funções
 
-* Code reuse: when you keep using the same piece of code.
-* Readibility: if code becomes long, need to break it down into several functions.
-* Focus: every class or function should do only one specific task.
-
----
-
-## Functions
-
-<img src="Images/Functions.png" style="width: 400px;"/>
+* "Reciclar" código: Quando estamos continuamente a usar o mesmo código
+* Compreensão: Se o código se tornar demasiado longo devemos dividi-lo em várias funções
+* Focalização: Cada função deve desempenhar apenas uma tarefa específica
 
 ---
 
-## Functions
+## Funções
 
 ```{r}
 myFunction <- function(input_argument){
@@ -27,4 +21,40 @@ myFunction <- function(input_argument){
 
 print(myFunction(2))
 ```
+
+---
+## Funções
+
+### Múltiplas condições
+```{r}
+myFunction <- function(input_argument){
+  
+  if(this) {
+    # do that
+    } else if (that) {
+    # do something else
+    } else {
+    #
+    }
+}
+```
+
+---
+## Exemplo: Escolher um filme 
+```{r, warning= FALSE}
+FilmeOk <- function(Nome_Filme){
+  
+  Filme <- Filmes[Filmes$Title == Nome_Filme,]
+
+  if(Filme$Rating < 6.3) {
+    print("Má escolha")
+
+    } else {
+    print("Boa escolha")
+    }
+}
+
+FilmeOk("Alien")
+```
+
 
