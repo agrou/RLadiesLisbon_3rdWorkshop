@@ -1,35 +1,53 @@
-## Simple data types
+## Tipos de dados 
 
 * Logical (TRUE or FALSE)
 * Character ("a", "apple", ...)
 * Numeric: 
-  + integer (-1, 0, 1, 2, ...)
-  + double (3.14, -2.0, ...)
+  * integer (-1, 0, 1, 2, ...)
+  * double (3.14, -2.0, ...)
 
 ---
 
-## Simple data types
 
-```{r}
-logic_var <- TRUE
-typeof(logic_var)
+## Exemplo de base de dados simples
+
+```{r, echo = FALSE}
+library(tidyverse)
+Filmes <- data_frame(ID = 1:6, Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien", NA), Genre = c("Drama", "Action", "Musical", "Comedy", NA, "Sci-Fi"), Duration = c(175L, 107L, 128L, 105L, NA, 107L), Rating = c(9.2, 8.0, 8.4, 7.8, 6.1, 6.7), For18Plus = c(TRUE, FALSE, FALSE, FALSE, TRUE, FALSE))
 ```
 
 ```{r}
-char_var <- "apple"
-typeof(char_var)
+Filmes
 ```
 
 ---
 
-## Simple data types
+## Tipos de dados
+
+A tabela possui diferentes tipos de dados:
+
+* Title - character
+* Genre - factor 
+* Duration - integer
+* Rating - double
+* For18Plus - double
+
+
+---
+
+## Tipos de dados
+
+```{r, echo = FALSE}
+Duration <- Filmes$Duration
+```
+
 
 ```{r}
-int_var <- 30L # Notice the L to force integer type
-typeof(int_var)
+typeof(Duration)
 ```
 
 ```{r}
-double_var <- 3.14
-typeof(double_var)
+class(Duration)
 ```
+
+

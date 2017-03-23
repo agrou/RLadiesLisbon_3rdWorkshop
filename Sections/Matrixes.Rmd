@@ -1,52 +1,20 @@
-## Matrixes
+## Matrizes
 
-<img src="Images/Matrices.png" style="width: 500px;"/>
+Estruturas multidimensionais que assumem apenas 1 tipo de dados
 
----
-
-## Matrixes
-
-Multidimension structures that can have only 1 data type.
-
-Creating a new matrix:
+Criar matriz:
 ```{r}
-(m <- matrix(1:9, nrow = 3, ncol = 3))
+m <- matrix(1:6, nrow = 6, ncol = 6)
+m
 ```
 
 ---
 
-## Matrixes
+## Matrizes
 
-Accessing elements of a matrix:
+Aceder a elementos da matriz:
 ```{r}
-m[2, ] # Accessing a row
-m[ ,1] # Accessing a column
-m[2,3] # Accessing an elements
-```
-
----
-
-## Matrixes
-
-Operations with matrices:
-```{r}
-t(m) # Transposed of a matrix
-```
-
----
-
-## Matrixes
-
-Operations with matrices:
-```{r}
-m*m # Element-by-element multiplication
-```
-
----
-
-## Matrixes
-
-Operations with matrices:
-```{r}
-m %*% m # Matrix multiplication
+m[2, ] # Aceder a uma linha
+m[ ,1] # Aceder a uma coluna
+m[2,3] # Aceder a um elemento
 ```

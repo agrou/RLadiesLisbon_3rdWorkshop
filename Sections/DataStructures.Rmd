@@ -1,14 +1,15 @@
-## Data structures
+## Estrutura de dados
 
-### Data structures are ensembles of simple data types
+A estrutura de dados armazena vários dados num objecto
 
 * Vector (1-dim):
-  + all elements have the same type
-* Matrix (2-dim): 
-  + all elements have the same type
+  * todos os elementos são do mesmo tipo
+* Matriz (2-dim): 
+  * todos os elementos são do mesmo tipo
 * Data frame (2-dim):
-  + each column can have a different data type
-* Lists (2-dim), less used:
-  + each column can have different data type
-  + each column can have different length
-  + not covered in this workshop
+  * cada coluna pode ter diferentes tipos de dados
+* Listas (2-dim):
+  * cada coluna pode ter diferentes tipos de dados
+  * cada coluna pode ter diferentes dimensões
+  
+  ---
