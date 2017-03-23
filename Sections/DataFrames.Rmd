@@ -13,6 +13,17 @@ df
 ```
 
 ---
+
+## Dataframes
+
+Concatenar *dataframes*
+```{r}
+cbind(df,z=c(6,7,8)) # adicionar mais uma variável
+rbind(df,c(10,'a')) # adicionar mais uma observação
+```
+
+---
+
 ## Dataframes
 
 
@@ -81,16 +92,6 @@ head(Filmes, 3) # Ver apenas 3 observações
 
 ```{r, eval = FALSE}
 View(Filmes) # Ver a dataframe completa
-```
-
----
-
-## Dataframes
-
-Concatenar *dataframes*
-```{r}
-cbind(df,z=c(6,7,8)) # adicionar mais uma variável
-rbind(df,c(10,'a')) # adicionar mais uma observação
 ```
 
 ---
