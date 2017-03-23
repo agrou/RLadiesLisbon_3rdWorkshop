@@ -1,21 +1,28 @@
-## Reading data from files
+## Ler dados a partir de ficheiros
 
 <img src="Images/ReadingWritingData.png" style="width: 800px;"/>
 
 ---
 
-## Reading data from files
-```{r}
-(df1 <- read.csv('C:/Users/GICpr/Desktop/exemplo.csv'))
+## Ler dados a partir de ficheiros
+```{r, eval = FALSE}
+df1 <- read.csv('C:/Users/GICpr/Desktop/exemplo.csv')
 ```
 
 
 --- 
 
-## Reading data from files
+## Ler dados a partir de ficheiros
 
 ### read.csv vs read_csv
-```{r, message=FALSE}
+```{r, message=FALSE, eval = FALSE}
 library(tidyverse)
-(df2 <- read_csv('C:/Users/GICpr/Desktop/exemplo.csv'))
+df2 <- read_csv('C:/Users/GICpr/Desktop/exemplo.csv')
 ```
+
+Exercício 7
+```{r}
+# Ler o ficheiro 'exemplo.csv' disponível na pasta meetup3
+
+```
+
