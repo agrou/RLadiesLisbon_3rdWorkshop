@@ -30,7 +30,7 @@ A tabela possui diferentes tipos de dados:
 * Genre - factor 
 * Duration - integer
 * Rating - double
-* For18Plus - double
+* For18Plus - logical
 
 
 ---
@@ -50,4 +50,7 @@ typeof(Duration)
 class(Duration)
 ```
 
+```{r}
+str(Duration)
+```
 
