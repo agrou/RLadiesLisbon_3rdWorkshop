@@ -8,7 +8,7 @@
 
 Estruturas multidimensionais usadas para armazenar bases de dados (estilo Excel):
 ```{r}
-df <- data.frame(x = 1:3, y = c('a','b','c'))
+df <- data.frame(x = 101:103, y = c('a','b','c'))
 df
 ```
 
