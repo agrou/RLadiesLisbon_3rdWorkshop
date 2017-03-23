@@ -101,7 +101,8 @@ Exercício 6
 ```{r, eval = FALSE}
 # Visualizar a data frame Filmes com o comando 'head'
 
-# Adicionar uma nova variável à dataframe Filmes com valores à escolha e atribuir o nome 'Filmes_Alt'
+# Adicionar uma nova variável à dataframe Filmes com valores à escolha e atribuir o 
+# nome 'Filmes_Alt'
 Filmes_Alt <- 
 ```
 
