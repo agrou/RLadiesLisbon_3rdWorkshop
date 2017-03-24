@@ -46,7 +46,7 @@ knitr::include_graphics("assets/img/RLadiesGlobal_LeafletMap.png")
 
 ## Objetivos da sessão:
 
-No final da sessão deverão ser capazes de utilizar o R Studio e saber utilizar conceitos básicos de programação em R para: 
+No final da sessão deverão ser capazes de: 
 
 *	Identificar e classificar dados
 *	Construir bases de dados
@@ -60,8 +60,7 @@ No final da sessão deverão ser capazes de utilizar o R Studio e saber utilizar
 
 * Tipos de dados 
 * Atribuir valores a variáveis
-* Estrutura de dados (p.e bases de dados)
-* Vectores, Matrizes e Data Frames
+* Estrutura de dados (vectores, matrizes e Data Frames)
 * Funções simples
 * Ler dados a partir de ficheiros
 
@@ -78,10 +77,10 @@ No final da sessão deverão ser capazes de utilizar o R Studio e saber utilizar
 2 * 6 + 9 * (10 ^ (-3) + 6 * 2)
 ```
 
-### Exercício 1
-```{r}
-# Experimentar um cálculo à escolha
-```
+
+### **Exercício 1**
+
+Experimentar um cálculo à escolha.
 
 --- 
 
@@ -115,7 +114,17 @@ No final da sessão deverão ser capazes de utilizar o R Studio e saber utilizar
 
 ---
 
+```{r child = 'Sections/MissingValues.Rmd'}
+```
+
+---
+
 ```{r child = 'Sections/Functions.Rmd'}
+```
+
+---
+
+```{r child = 'Sections/ReadingWritingData.Rmd'}
 ```
 
 ---

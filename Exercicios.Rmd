@@ -1,0 +1,82 @@
+---
+title: "Exercicios"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+Os exercícios baseiam-se na seguinte tabela.
+
+     ID          Title   Genre Duration Rating For18Plus
+  <int>          <chr>   <chr>    <int>  <dbl>     <lgl>
+1     1  The Godfather   Drama      175    9.2      TRUE
+2     2 The Terminator  Action      107    8.0     FALSE
+3     3     La La Land Musical      128    8.4     FALSE
+4     4   Ghostbusters  Comedy      105    7.8     FALSE
+5     5          Alien    <NA>       NA    6.1      TRUE
+6     6           <NA>  Sci-Fi      107    6.7     FALSE
+
+
+**Exercício 1**
+
+Experimentar um cálculo à escolha.
+```{r}
+
+```
+
+
+**Exercício 2**
+
+Criar a variável Genre com o valor "Drama". Verificar o conteudo de Genre.
+```{r}
+
+```
+
+
+**Exercício 3**
+
+Criar vector For18Plus com valores TRUE ou FALSE, na ordem da tabela.
+```{r}
+
+```
+
+
+**Exercício 4** 
+
+Criar vector Class com a sequência de valores "Bom", "Mau", "Mehh", repetida 2 vezes.
+```{r}
+
+```
+
+
+**Exercício 5** 
+
+Aceder à classificação (variável Class) do 3o. filme.
+```{r}
+
+```
+
+
+**Exercício 6** 
+
+Completar o código com os dados que faltam. Armazenar o resultado numa dataframe com o nome Filmes.
+```{r, eval = FALSE}
+library(tidyverse)
+data_frame(ID = 1:6, Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien", NA))
+```
+
+
+**Exercício 7**
+
+Visualizar a data frame Filmes com o comando 'head'.
+```{r, eval = FALSE}
+
+```
+
+**Exercício 8** 
+
+Criar uma nova data frame Filmes_Alt resultante da concatenaçao da data frame Filmes com o vector Class (ver exercício 4).
+```{r}
+
+```
+
