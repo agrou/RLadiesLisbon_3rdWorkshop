@@ -1,15 +1,13 @@
 ## Estrutura de dados
 
-A estrutura de dados armazena vários dados num objecto
-
-* Vector (1-dim):
-  * todos os elementos são do mesmo tipo
-* Matriz (2-dim): 
-  * todos os elementos são do mesmo tipo
-* Data frame (2-dim):
-  * cada coluna pode ter diferentes tipos de dados
-* Listas (2-dim):
-  * cada coluna pode ter diferentes tipos de dados
-  * cada coluna pode ter diferentes dimensões
+* Vectores e matrizes: todos os elementos são do mesmo tipo.
   
-  ---
+<img src="Images/DataTypes_ObjectsVectorsMatrices.png" style="width: 900px;"/>
+
+---
+
+## Estrutura de dados
+
+* Data frames e listas: colunas podem ter tipos diferentes
+
+<img src="Images/DataTypes_DataFramesLists.png" style="width: 900px;"/>

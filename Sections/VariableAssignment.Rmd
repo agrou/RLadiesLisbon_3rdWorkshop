@@ -10,8 +10,5 @@ Para ver o conteúdo de uma variável, devemos escrever o nome dela:
 Title
 ```
 
-### Exercício 2
-```{r}
-# Criar a variável "genre" com o valor "Drama"
-
-```
+### **Exercício 2**
+Criar a variável Genre com o valor "Drama"

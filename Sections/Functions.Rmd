@@ -2,11 +2,11 @@
 
 As funções englobam uma tarefa numa única linha de código
 
-Utilidade das funções
+Porquê utilizar funções:
 
-* "Reciclar" código: Quando estamos continuamente a usar o mesmo código
-* Compreensão: Se o código se tornar demasiado longo devemos dividi-lo em várias funções
-* Focalização: Cada função deve desempenhar apenas uma tarefa específica
+* Reutilizar código
+* Melhorar a legibilidade
+* Dividir um problema noutros mais pequenos e fáceis de resolver
 
 ---
 
@@ -23,24 +23,10 @@ print(myFunction(2))
 ```
 
 ---
+
 ## Funções
 
-### Múltiplas condições
-```{r}
-myFunction <- function(input_argument){
-  
-  if(this) {
-    # do that
-    } else if (that) {
-    # do something else
-    } else {
-    #
-    }
-}
-```
-
----
-## Exemplo: Escolher um filme 
+Exemplo: Escolher um filme 
 ```{r, warning= FALSE}
 FilmeOk <- function(Nome_Filme){
   
@@ -56,5 +42,3 @@ FilmeOk <- function(Nome_Filme){
 
 FilmeOk("Alien")
 ```
-
-

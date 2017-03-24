@@ -1,23 +1,8 @@
 ## Ler dados a partir de ficheiros
 
-<img src="Images/ReadingWritingData.png" style="width: 800px;"/>
-
----
-
-## Ler dados a partir de ficheiros
-```{r, eval = FALSE}
-df1 <- read.csv('C:/Users/GICpr/Desktop/exemplo.csv')
-```
-
-
---- 
-
-## Ler dados a partir de ficheiros
-
-### read.csv vs read_csv
 ```{r, message=FALSE, eval = FALSE}
 library(tidyverse)
-df2 <- read_csv('C:/Users/GICpr/Desktop/exemplo.csv')
+df <- read_csv('C:/Users/GICpr/Desktop/exemplo.csv')
 ```
 
 Exercício 7

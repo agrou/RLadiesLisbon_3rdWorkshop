@@ -1,25 +1,11 @@
 ## Dataframes
 
-<img src="Images/DataFrames.png" style="width: 450px;"/>
-
----
-
-## Dataframes
-
-Estruturas multidimensionais usadas para armazenar bases de dados (estilo Excel):
+Estruturas multidimensionais usadas para armazenar tabelas:
 ```{r}
-df <- data.frame(x = 101:103, y = c('a','b','c'))
+library(tidyverse)
+df <- data_frame(ID = 1:6, Duration = c(175,107,128,105,NA,107), 
+Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien", NA))
 df
-```
-
----
-
-## Dataframes
-
-Concatenar *dataframes*
-```{r}
-cbind(df,z=c(6,7,8)) # adicionar mais uma variável
-rbind(df,c(10,'a')) # adicionar mais uma observação
 ```
 
 ---
@@ -29,19 +15,21 @@ rbind(df,c(10,'a')) # adicionar mais uma observação
 
 Uma *dataframe* pode ser interpretada como:
 
-* uma lista onde todas as colunas têm a mesma altura
-* uma matriz onde 
-  + cada coluna tem um nome
-  + diferentes colunas têm diferentes tipos de dados.
+* uma lista
+* uma matriz
+
+<img src="Images/DataTypes_MatrixDataFrameList.png" style="width: 1000px;"/>
 
 ---
 ## Dataframes
 
-**Exercício 5:** Completar o código com os dados que faltam e armazenar o resultado numa dataframe com o nome Filmes
+### **Exercício 6** 
+
+Completar o código com os dados que faltam. Armazenar o resultado numa dataframe com o nome Filmes.
 ```{r, eval = FALSE}
-data.frame(ID = 1:6, 
-           Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", 
-                     "Alien", ""))
+library(tidyverse)
+data_frame(ID = 1:6, 
+Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien", NA))
 
 ```
 
@@ -98,53 +86,10 @@ View(Filmes) # Ver a dataframe completa
 
 ## Dataframes
 
-Exercício 6
-```{r, eval = FALSE}
-# Visualizar a data frame Filmes com o comando 'head'
+### **Exercício 7:** 
 
-# Adicionar uma nova variável à dataframe Filmes com valores à escolha e atribuir o 
-# nome 'Filmes_Alt'
-Filmes_Alt <- 
-```
+Visualizar a data frame Filmes com o comando 'head'
 
----
+### **Exercício 8:** 
 
-## Dataframes
-
-data.frame *vs* data_frame `(tidyverse)`
-
-A função base data.frame transforma colunas em factors
-
-```{r}
-df1 <- data.frame(x = 1:3, y = c('a','b','c'))
-df1
-```
-
----
-
-## Dataframes
-
-A função base data.frame transforma colunas em factors, o que pode representar um problema ao adicionar um novo valor
-```{r}
-rbind(df1, c(4,'z'))
-```
-
-
----
-
-## Dataframes
-
-
-```{r, message=FALSE}
-library(tidyverse)
-df2 <- data_frame(x = 1:3, y = c('a','b','c'))
-df2
-```
-
----
-
-## Dataframes
-
-```{r}
-rbind(df2, c(4,'z'))
-```
+Criar uma nova data frame Filmes_Alt resultante da concatenaçao da data frame Filmes com o vector Class (ver exercício 4).
