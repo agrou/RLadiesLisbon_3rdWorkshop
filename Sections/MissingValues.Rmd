@@ -1,0 +1,25 @@
+## Valores em falta (missing values)
+
+NA significa "Not Available", "Not Applicable" ou "Not Announced"
+
+```{r}
+is.na(Filmes$Title)
+```
+
+```{r}
+complete.cases(Filmes)
+```
+
+---
+
+## Valores em falta (missing values)
+
+Eliminar NA's
+```{r}
+Filmes$Title[!is.na(Filmes$Title)]
+```
+
+```{r}
+Filmes[complete.cases(Filmes),]
+```
+

@@ -4,7 +4,7 @@ Estruturas multidimensionais que assumem apenas 1 tipo de dados
 
 Criar matriz:
 ```{r}
-m <- matrix(1:6, nrow = 6, ncol = 6)
+m <- matrix(1:36, nrow = 6, ncol = 6)
 m
 ```
 
@@ -18,3 +18,22 @@ m[2, ] # Aceder a uma linha
 m[ ,1] # Aceder a uma coluna
 m[2,3] # Aceder a um elemento
 ```
+
+---
+
+## Matrizes
+
+Concatenar matrizes:
+```{r}
+cbind(m,c(101,102,103,104,105,106)) # adicionar mais uma coluna
+```
+
+---
+
+## Matrizes
+
+Concatenar matrizes:
+```{r}
+rbind(m,c(101,102,103,104,105,106)) # adicionar mais uma linha
+```
+

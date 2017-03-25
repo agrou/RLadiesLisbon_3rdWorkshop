@@ -28,7 +28,7 @@ Duration
 
 Criar uma sequência com repetição:
 ```{r}
-Rating <- rep(10, times = 5)
+Rating <- rep(c(1, 5, 3), times = 3)
 Rating
 ```
 
@@ -48,13 +48,21 @@ Genre <- c("Drama", "Action", "Musical", "Comedy", "Sci-Fi")
 Genre[1]
 ```
 
+**Nota:** Os índices em R começam em [1], ao contrário de outras linguagens (Python, Java, C) que começam em [0].
+
 --- 
 ## Vectores
 
-**Exercício 3:** Criar vector For18Plus com valores de TRUE or FALSE, na ordem da tabela
+### **Exercício 3:** 
 
-**Exercício 4:** Criar vector "Class" com a sequência de valores "Bom", "Mau", "Mehh", 
-repetida 2 vezes
+Criar vector For18Plus com valores de TRUE or FALSE, na ordem da tabela.
 
-**Exercício 5:** Aceder à classificação (variável "Class") do filme "La La Land" 
+### **Exercício 4:** 
+
+Criar vector Class com a sequência de valores "Bom", "Mau", "Mehh", 
+repetida 2 vezes.
+
+### **Exercício 5:** 
+
+Aceder à classificação (variável Class) do 3o. filme.
 

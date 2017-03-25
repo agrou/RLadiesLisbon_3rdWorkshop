@@ -1,23 +1,23 @@
 ## Tipos de dados 
 
-* Logical (TRUE or FALSE)
-* Character ("a", "apple", ...)
-* Numeric: 
-  * integer (-1, 0, 1, 2, ...)
-  * double (3.14, -2.0, ...)
+### Exemplo de base de dados simples
 
----
-
-
-## Exemplo de base de dados simples
-
-```{r, echo = FALSE}
+```{r, echo = FALSE, message=FALSE}
 library(tidyverse)
 Filmes <- data_frame(ID = 1:6, Title = c("The Godfather", "The Terminator", "La La Land", "Ghostbusters", "Alien", NA), Genre = c("Drama", "Action", "Musical", "Comedy", NA, "Sci-Fi"), Duration = c(175L, 107L, 128L, 105L, NA, 107L), Rating = c(9.2, 8.0, 8.4, 7.8, 6.1, 6.7), For18Plus = c(TRUE, FALSE, FALSE, FALSE, TRUE, FALSE))
 ```
 
 ```{r}
-Filmes
+# Filmes
+
+#      ID          Title   Genre Duration Rating For18Plus
+#   <int>          <chr>   <chr>    <int>  <dbl>     <lgl>
+# 1     1  The Godfather   Drama      175    9.2      TRUE
+# 2     2 The Terminator  Action      107    8.0     FALSE
+# 3     3     La La Land Musical      128    8.4     FALSE
+# 4     4   Ghostbusters  Comedy      105    7.8     FALSE
+# 5     5          Alien    <NA>       NA    6.1      TRUE
+# 6     6           <NA>  Sci-Fi      107    6.7     FALSE
 ```
 
 ---
@@ -30,7 +30,7 @@ A tabela possui diferentes tipos de dados:
 * Genre - factor 
 * Duration - integer
 * Rating - double
-* For18Plus - double
+* For18Plus - logical
 
 
 ---
@@ -50,4 +50,7 @@ typeof(Duration)
 class(Duration)
 ```
 
+```{r}
+str(Duration)
+```
 

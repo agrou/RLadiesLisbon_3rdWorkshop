@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
   <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
   <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="libraries/widgets/bootstrap/css/bootstrap.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
 <link rel=stylesheet href="./assets/css/slide.css"></link>
 
   
@@ -37,7 +38,7 @@
   </aside>
   <hgroup class="auto-fadein">
     <h1>Linguagem R para iniciados</h1>
-    <h2>23 March 2017</h2>
+    <h2>24 March 2017</h2>
     <p><br/></p>
   </hgroup>
   <article></article>  
@@ -80,7 +81,7 @@
     <h2>Objetivos da sessão:</h2>
   </hgroup>
   <article data-timings="">
-    <p>No final da sessão deverão ser capazes de utilizar o R Studio e saber utilizar conceitos básicos de programação em R para: </p>
+    <p>No final da sessão deverão ser capazes de: </p>
 
 <ul>
 <li>  Identificar e classificar dados</li>
@@ -102,8 +103,7 @@
     <ul>
 <li>Tipos de dados </li>
 <li>Atribuir valores a variáveis</li>
-<li>Estrutura de dados (p.e bases de dados)</li>
-<li>Vectores, Matrizes e Data Frames</li>
+<li>Estrutura de dados (vectores, matrizes e Data Frames)</li>
 <li>Funções simples</li>
 <li>Ler dados a partir de ficheiros</li>
 </ul>
@@ -139,10 +139,9 @@
 <pre><code>## [1] 120.009
 </code></pre>
 
-<h3>Exercício 1</h3>
+<h3><strong>Exercício 1</strong></h3>
 
-<pre><code class="r"># Experimentar um cálculo à escolha
-</code></pre>
+<p>Experimentar um cálculo à escolha.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -153,45 +152,25 @@
     <h2>Tipos de dados</h2>
   </hgroup>
   <article data-timings="">
-    <ul>
-<li>Logical (TRUE or FALSE)</li>
-<li>Character (&quot;a&quot;, &quot;apple&quot;, ...)</li>
-<li>Numeric: 
+    <h3>Exemplo de base de dados simples</h3>
 
-<ul>
-<li>integer (-1, 0, 1, 2, ...)</li>
-<li>double (3.14, -2.0, ...)</li>
-</ul></li>
-</ul>
+<pre><code class="r"># Filmes
+
+#      ID          Title   Genre Duration Rating For18Plus
+#   &lt;int&gt;          &lt;chr&gt;   &lt;chr&gt;    &lt;int&gt;  &lt;dbl&gt;     &lt;lgl&gt;
+# 1     1  The Godfather   Drama      175    9.2      TRUE
+# 2     2 The Terminator  Action      107    8.0     FALSE
+# 3     3     La La Land Musical      128    8.4     FALSE
+# 4     4   Ghostbusters  Comedy      105    7.8     FALSE
+# 5     5          Alien    &lt;NA&gt;       NA    6.1      TRUE
+# 6     6           &lt;NA&gt;  Sci-Fi      107    6.7     FALSE
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
 <slide class="" id="slide-8" style="background:;">
-  <hgroup>
-    <h2>Exemplo de base de dados simples</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">Filmes
-</code></pre>
-
-<pre><code>## # A tibble: 6 × 6
-##      ID          Title   Genre Duration Rating For18Plus
-##   &lt;int&gt;          &lt;chr&gt;   &lt;chr&gt;    &lt;int&gt;  &lt;dbl&gt;     &lt;lgl&gt;
-## 1     1  The Godfather   Drama      175    9.2      TRUE
-## 2     2 The Terminator  Action      107    8.0     FALSE
-## 3     3     La La Land Musical      128    8.4     FALSE
-## 4     4   Ghostbusters  Comedy      105    7.8     FALSE
-## 5     5          Alien    &lt;NA&gt;       NA    6.1      TRUE
-## 6     6           &lt;NA&gt;  Sci-Fi      107    6.7     FALSE
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>Tipos de dados</h2>
   </hgroup>
@@ -203,14 +182,14 @@
 <li>Genre - factor </li>
 <li>Duration - integer</li>
 <li>Rating - double</li>
-<li>For18Plus - double</li>
+<li>For18Plus - logical</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-10" style="background:;">
+<slide class="" id="slide-9" style="background:;">
   <hgroup>
     <h2>Tipos de dados</h2>
   </hgroup>
@@ -227,11 +206,17 @@
 <pre><code>## [1] &quot;integer&quot;
 </code></pre>
 
+<pre><code class="r">str(Duration)
+</code></pre>
+
+<pre><code>##  int [1:6] 175 107 128 105 NA 107
+</code></pre>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-11" style="background:;">
+<slide class="" id="slide-10" style="background:;">
   <hgroup>
     <h2>Atribuir valores a variáveis</h2>
   </hgroup>
@@ -249,10 +234,24 @@
 <pre><code>## [1] &quot;The Godfather&quot;
 </code></pre>
 
-<h3>Exercício 2</h3>
+<h3><strong>Exercício 2</strong></h3>
 
-<pre><code class="r"># Criar a variável &quot;genre&quot; com o valor &quot;Drama&quot;
-</code></pre>
+<p>Criar a variável Genre com o valor &quot;Drama&quot;</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-11" style="background:;">
+  <hgroup>
+    <h2>Estrutura de dados</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Vectores e matrizes: todos os elementos são do mesmo tipo.</li>
+</ul>
+
+<p><img src="Images/DataTypes_ObjectsVectorsMatrices.png" style="width: 900px;"/></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -263,33 +262,11 @@
     <h2>Estrutura de dados</h2>
   </hgroup>
   <article data-timings="">
-    <p>A estrutura de dados armazena vários dados num objecto</p>
-
-<ul>
-<li>Vector (1-dim):
-
-<ul>
-<li>todos os elementos são do mesmo tipo</li>
-</ul></li>
-<li>Matriz (2-dim): 
-
-<ul>
-<li>todos os elementos são do mesmo tipo</li>
-</ul></li>
-<li>Data frame (2-dim):
-
-<ul>
-<li>cada coluna pode ter diferentes tipos de dados</li>
-</ul></li>
-<li><p>Listas (2-dim):</p>
-
-<ul>
-<li>cada coluna pode ter diferentes tipos de dados</li>
-<li>cada coluna pode ter diferentes dimensões</li>
+    <ul>
+<li>Data frames e listas: colunas podem ter tipos diferentes</li>
 </ul>
 
-<hr></li>
-</ul>
+<p><img src="Images/DataTypes_DataFramesLists.png" style="width: 900px;"/></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -348,11 +325,11 @@ Duration
   <article data-timings="">
     <p>Criar uma sequência com repetição:</p>
 
-<pre><code class="r">Rating &lt;- rep(10, times = 5)
+<pre><code class="r">Rating &lt;- rep(c(1, 5, 3), times = 3)
 Rating
 </code></pre>
 
-<pre><code>## [1] 10 10 10 10 10
+<pre><code>## [1] 1 5 3 1 5 3 1 5 3
 </code></pre>
 
 <p>Repetir cada valor numa sequência:</p>
@@ -382,6 +359,8 @@ Genre[1]
 <pre><code>## [1] &quot;Drama&quot;
 </code></pre>
 
+<p><strong>Nota:</strong> Os índices em R começam em [1], ao contrário de outras linguagens (Python, Java, C) que começam em [0].</p>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -391,12 +370,18 @@ Genre[1]
     <h2>Vectores</h2>
   </hgroup>
   <article data-timings="">
-    <p><strong>Exercício 3:</strong> Criar vector For18Plus com valores de TRUE or FALSE, na ordem da tabela</p>
+    <h3><strong>Exercício 3:</strong></h3>
 
-<p><strong>Exercício 4:</strong> Criar vector &quot;Class&quot; com a sequência de valores &quot;Bom&quot;, &quot;Mau&quot;, &quot;Mehh&quot;, 
-repetida 2 vezes</p>
+<p>Criar vector For18Plus com valores de TRUE or FALSE, na ordem da tabela.</p>
 
-<p><strong>Exercício 5:</strong> Aceder à classificação (variável &quot;Class&quot;) do filme &quot;La La Land&quot; </p>
+<h3><strong>Exercício 4:</strong></h3>
+
+<p>Criar vector Class com a sequência de valores &quot;Bom&quot;, &quot;Mau&quot;, &quot;Mehh&quot;, 
+repetida 2 vezes.</p>
+
+<h3><strong>Exercício 5:</strong></h3>
+
+<p>Aceder à classificação (variável Class) do 3o. filme.</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -411,17 +396,17 @@ repetida 2 vezes</p>
 
 <p>Criar matriz:</p>
 
-<pre><code class="r">m &lt;- matrix(1:6, nrow = 6, ncol = 6)
+<pre><code class="r">m &lt;- matrix(1:36, nrow = 6, ncol = 6)
 m
 </code></pre>
 
 <pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
-## [1,]    1    1    1    1    1    1
-## [2,]    2    2    2    2    2    2
-## [3,]    3    3    3    3    3    3
-## [4,]    4    4    4    4    4    4
-## [5,]    5    5    5    5    5    5
-## [6,]    6    6    6    6    6    6
+## [1,]    1    7   13   19   25   31
+## [2,]    2    8   14   20   26   32
+## [3,]    3    9   15   21   27   33
+## [4,]    4   10   16   22   28   34
+## [5,]    5   11   17   23   29   35
+## [6,]    6   12   18   24   30   36
 </code></pre>
 
   </article>
@@ -438,7 +423,7 @@ m
 <pre><code class="r">m[2, ] # Aceder a uma linha
 </code></pre>
 
-<pre><code>## [1] 2 2 2 2 2 2
+<pre><code>## [1]  2  8 14 20 26 32
 </code></pre>
 
 <pre><code class="r">m[ ,1] # Aceder a uma coluna
@@ -450,7 +435,7 @@ m
 <pre><code class="r">m[2,3] # Aceder a um elemento
 </code></pre>
 
-<pre><code>## [1] 2
+<pre><code>## [1] 14
 </code></pre>
 
   </article>
@@ -459,10 +444,22 @@ m
 
 <slide class="" id="slide-20" style="background:;">
   <hgroup>
-    <h2>Dataframes</h2>
+    <h2>Matrizes</h2>
   </hgroup>
   <article data-timings="">
-    <p><img src="Images/DataFrames.png" style="width: 450px;"/></p>
+    <p>Concatenar matrizes:</p>
+
+<pre><code class="r">cbind(m,c(101,102,103,104,105,106)) # adicionar mais uma coluna
+</code></pre>
+
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6] [,7]
+## [1,]    1    7   13   19   25   31  101
+## [2,]    2    8   14   20   26   32  102
+## [3,]    3    9   15   21   27   33  103
+## [4,]    4   10   16   22   28   34  104
+## [5,]    5   11   17   23   29   35  105
+## [6,]    6   12   18   24   30   36  106
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -470,19 +467,22 @@ m
 
 <slide class="" id="slide-21" style="background:;">
   <hgroup>
-    <h2>Dataframes</h2>
+    <h2>Matrizes</h2>
   </hgroup>
   <article data-timings="">
-    <p>Estruturas multidimensionais usadas para armazenar bases de dados (estilo Excel):</p>
+    <p>Concatenar matrizes:</p>
 
-<pre><code class="r">df &lt;- data.frame(x = 1:3, y = c(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;))
-df
+<pre><code class="r">rbind(m,c(101,102,103,104,105,106)) # adicionar mais uma linha
 </code></pre>
 
-<pre><code>##   x y
-## 1 1 a
-## 2 2 b
-## 3 3 c
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]    1    7   13   19   25   31
+## [2,]    2    8   14   20   26   32
+## [3,]    3    9   15   21   27   33
+## [4,]    4   10   16   22   28   34
+## [5,]    5   11   17   23   29   35
+## [6,]    6   12   18   24   30   36
+## [7,]  101  102  103  104  105  106
 </code></pre>
 
   </article>
@@ -494,17 +494,24 @@ df
     <h2>Dataframes</h2>
   </hgroup>
   <article data-timings="">
-    <p>Uma <em>dataframe</em> pode ser interpretada como:</p>
+    <p>Estruturas multidimensionais usadas para armazenar tabelas:</p>
 
-<ul>
-<li>uma lista onde todas as colunas têm a mesma altura</li>
-<li>uma matriz onde 
+<pre><code class="r">library(tidyverse)
+df &lt;- data_frame(ID = 1:6, Duration = c(175,107,128,105,NA,107), 
+Title = c(&quot;The Godfather&quot;, &quot;The Terminator&quot;, &quot;La La Land&quot;, &quot;Ghostbusters&quot;, &quot;Alien&quot;, NA))
+df
+</code></pre>
 
-<ul>
-<li>cada coluna tem um nome</li>
-<li>diferentes colunas têm diferentes tipos de dados.</li>
-</ul></li>
-</ul>
+<pre><code>## # A tibble: 6 � 3
+##      ID Duration          Title
+##   &lt;int&gt;    &lt;dbl&gt;          &lt;chr&gt;
+## 1     1      175  The Godfather
+## 2     2      107 The Terminator
+## 3     3      128     La La Land
+## 4     4      105   Ghostbusters
+## 5     5       NA          Alien
+## 6     6      107           &lt;NA&gt;
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -515,12 +522,14 @@ df
     <h2>Dataframes</h2>
   </hgroup>
   <article data-timings="">
-    <p><strong>Exercício 5:</strong> Completar o código com os dados que faltam e armazenar o resultado numa dataframe com o nome Filmes</p>
+    <p>Uma <em>dataframe</em> pode ser interpretada como:</p>
 
-<pre><code class="r">data.frame(ID = 1:6, 
-           Title = c(&quot;The Godfather&quot;, &quot;The Terminator&quot;, &quot;La La Land&quot;, &quot;Ghostbusters&quot;, 
-                     &quot;Alien&quot;, &quot;&quot;))
-</code></pre>
+<ul>
+<li>uma lista</li>
+<li>uma matriz</li>
+</ul>
+
+<p><img src="Images/DataTypes_MatrixDataFrameList.png" style="width: 1000px;"/></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -531,13 +540,31 @@ df
     <h2>Dataframes</h2>
   </hgroup>
   <article data-timings="">
+    <h3><strong>Exercício 6</strong></h3>
+
+<p>Completar o código com os dados que faltam e armazenar o resultado numa dataframe com o nome Filmes</p>
+
+<pre><code class="r">library(tidyverse)
+data_frame(ID = 1:6, 
+Title = c(&quot;The Godfather&quot;, &quot;The Terminator&quot;, &quot;La La Land&quot;, &quot;Ghostbusters&quot;, &quot;Alien&quot;, NA))
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-25" style="background:;">
+  <hgroup>
+    <h2>Dataframes</h2>
+  </hgroup>
+  <article data-timings="">
     <p>Aceder a elementos de uma <em>dataframe</em> </p>
 
 <pre><code class="r"># Aceder por índice:
 Filmes[2,2]
 </code></pre>
 
-<pre><code>## # A tibble: 1 × 1
+<pre><code>## # A tibble: 1 � 1
 ##            Title
 ##            &lt;chr&gt;
 ## 1 The Terminator
@@ -555,7 +582,7 @@ Filmes$Title
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-25" style="background:;">
+<slide class="" id="slide-26" style="background:;">
   <hgroup>
     <h2>Dataframes</h2>
   </hgroup>
@@ -584,7 +611,7 @@ Filmes$Title
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-26" style="background:;">
+<slide class="" id="slide-27" style="background:;">
   <hgroup>
     <h2>Dataframes</h2>
   </hgroup>
@@ -594,7 +621,7 @@ Filmes$Title
 <pre><code class="r">head(Filmes) # Ver as primeiras 6 observações
 </code></pre>
 
-<pre><code>## # A tibble: 6 × 6
+<pre><code>## # A tibble: 6 � 6
 ##      ID          Title   Genre Duration Rating For18Plus
 ##   &lt;int&gt;          &lt;chr&gt;   &lt;chr&gt;    &lt;int&gt;  &lt;dbl&gt;     &lt;lgl&gt;
 ## 1     1  The Godfather   Drama      175    9.2      TRUE
@@ -609,7 +636,7 @@ Filmes$Title
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-27" style="background:;">
+<slide class="" id="slide-28" style="background:;">
   <hgroup>
     <h2>Dataframes</h2>
   </hgroup>
@@ -619,7 +646,7 @@ Filmes$Title
 <pre><code class="r">head(Filmes, 3) # Ver apenas 3 observações
 </code></pre>
 
-<pre><code>## # A tibble: 3 × 6
+<pre><code>## # A tibble: 3 � 6
 ##      ID          Title   Genre Duration Rating For18Plus
 ##   &lt;int&gt;          &lt;chr&gt;   &lt;chr&gt;    &lt;int&gt;  &lt;dbl&gt;     &lt;lgl&gt;
 ## 1     1  The Godfather   Drama      175    9.2      TRUE
@@ -634,48 +661,18 @@ Filmes$Title
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-28" style="background:;">
-  <hgroup>
-    <h2>Dataframes</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Concatenar <em>dataframes</em></p>
-
-<pre><code class="r">cbind(df,z=c(6,7,8)) # adicionar mais uma variável
-</code></pre>
-
-<pre><code>##   x y z
-## 1 1 a 6
-## 2 2 b 7
-## 3 3 c 8
-</code></pre>
-
-<pre><code class="r">rbind(df,c(10,&#39;a&#39;)) # adicionar mais uma observação
-</code></pre>
-
-<pre><code>##    x y
-## 1  1 a
-## 2  2 b
-## 3  3 c
-## 4 10 a
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
 <slide class="" id="slide-29" style="background:;">
   <hgroup>
     <h2>Dataframes</h2>
   </hgroup>
   <article data-timings="">
-    <p>Exercício 6</p>
+    <h3><strong>Exercício 7:</strong></h3>
 
-<pre><code class="r"># Visualizar a data frame Filmes com o comando &#39;head&#39;
+<p>Visualizar a data frame Filmes com o comando &#39;head&#39;</p>
 
-# Adicionar uma nova variável à dataframe Filmes com valores à escolha e atribuir o nome &#39;Filmes_Alt&#39;
-Filmes_Alt &lt;- 
-</code></pre>
+<h3><strong>Exercício 8:</strong></h3>
+
+<p>Criar uma nova data frame Filmes_Alt resultante da concatenaçao da data frame Filmes com o vector Class (ver exercício 4).</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -683,21 +680,21 @@ Filmes_Alt &lt;-
 
 <slide class="" id="slide-30" style="background:;">
   <hgroup>
-    <h2>Dataframes</h2>
+    <h2>Valores em falta (missing values)</h2>
   </hgroup>
   <article data-timings="">
-    <p>data.frame <em>vs</em> data_frame <code>(tidyverse)</code></p>
+    <p>NA significa &quot;Not Available&quot;, &quot;Not Applicable&quot; ou &quot;Not Announced&quot;</p>
 
-<p>A função base data.frame transforma colunas em factors</p>
-
-<pre><code class="r">df1 &lt;- data.frame(x = 1:3, y = c(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;))
-df1
+<pre><code class="r">is.na(Filmes$Title)
 </code></pre>
 
-<pre><code>##   x y
-## 1 1 a
-## 2 2 b
-## 3 3 c
+<pre><code>## [1] FALSE FALSE FALSE FALSE FALSE  TRUE
+</code></pre>
+
+<pre><code class="r">complete.cases(Filmes)
+</code></pre>
+
+<pre><code>## [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE
 </code></pre>
 
   </article>
@@ -706,23 +703,28 @@ df1
 
 <slide class="" id="slide-31" style="background:;">
   <hgroup>
-    <h2>Dataframes</h2>
+    <h2>Valores em falta (missing values)</h2>
   </hgroup>
   <article data-timings="">
-    <p>A função base data.frame transforma colunas em factors, o que pode representar um problema ao adicionar um novo valor</p>
+    <p>Eliminar NA&#39;s</p>
 
-<pre><code class="r">rbind(df1, c(4,&#39;z&#39;))
+<pre><code class="r">Filmes$Title[!is.na(Filmes$Title)]
 </code></pre>
 
-<pre><code>## Warning in `[&lt;-.factor`(`*tmp*`, ri, value = &quot;z&quot;): invalid factor level, NA
-## generated
+<pre><code>## [1] &quot;The Godfather&quot;  &quot;The Terminator&quot; &quot;La La Land&quot;     &quot;Ghostbusters&quot;  
+## [5] &quot;Alien&quot;
 </code></pre>
 
-<pre><code>##   x    y
-## 1 1    a
-## 2 2    b
-## 3 3    c
-## 4 4 &lt;NA&gt;
+<pre><code class="r">Filmes[complete.cases(Filmes),]
+</code></pre>
+
+<pre><code>## # A tibble: 4 � 6
+##      ID          Title   Genre Duration Rating For18Plus
+##   &lt;int&gt;          &lt;chr&gt;   &lt;chr&gt;    &lt;int&gt;  &lt;dbl&gt;     &lt;lgl&gt;
+## 1     1  The Godfather   Drama      175    9.2      TRUE
+## 2     2 The Terminator  Action      107    8.0     FALSE
+## 3     3     La La Land Musical      128    8.4     FALSE
+## 4     4   Ghostbusters  Comedy      105    7.8     FALSE
 </code></pre>
 
   </article>
@@ -731,67 +733,24 @@ df1
 
 <slide class="" id="slide-32" style="background:;">
   <hgroup>
-    <h2>Dataframes</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">library(tidyverse)
-df2 &lt;- data_frame(x = 1:3, y = c(&#39;a&#39;,&#39;b&#39;,&#39;c&#39;))
-df2
-</code></pre>
-
-<pre><code>## # A tibble: 3 × 2
-##       x     y
-##   &lt;int&gt; &lt;chr&gt;
-## 1     1     a
-## 2     2     b
-## 3     3     c
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-33" style="background:;">
-  <hgroup>
-    <h2>Dataframes</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">rbind(df2, c(4,&#39;z&#39;))
-</code></pre>
-
-<pre><code>## # A tibble: 4 × 2
-##       x     y
-## * &lt;chr&gt; &lt;chr&gt;
-## 1     1     a
-## 2     2     b
-## 3     3     c
-## 4     4     z
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-34" style="background:;">
-  <hgroup>
     <h2>Funções</h2>
   </hgroup>
   <article data-timings="">
     <p>As funções englobam uma tarefa numa única linha de código</p>
 
-<p>Utilidade das funções</p>
+<p>Porquê utilizar funções:</p>
 
 <ul>
-<li>&quot;Reciclar&quot; código: Quando estamos continuamente a usar o mesmo código</li>
-<li>Compreensão: Se o código se tornar demasiado longo devemos dividi-lo em várias funções</li>
-<li>Focalização: Cada função deve desempenhar apenas uma tarefa específica</li>
+<li>Reutilizar código</li>
+<li>Melhorar a legibilidade</li>
+<li>Dividir um problema noutros mais pequenos e fáceis de resolver</li>
 </ul>
 
   </article>
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-35" style="background:;">
+<slide class="" id="slide-33" style="background:;">
   <hgroup>
     <h2>Funções</h2>
   </hgroup>
@@ -812,35 +771,14 @@ print(myFunction(2))
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-36" style="background:;">
+<slide class="" id="slide-34" style="background:;">
   <hgroup>
     <h2>Funções</h2>
   </hgroup>
   <article data-timings="">
-    <h3>Múltiplas condições</h3>
+    <p>Exemplo: Escolher um filme </p>
 
-<pre><code class="r">myFunction &lt;- function(input_argument){
-
-  if(this) {
-    # do that
-    } else if (that) {
-    # do something else
-    } else {
-    #
-    }
-}
-</code></pre>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="" id="slide-37" style="background:;">
-  <hgroup>
-    <h2>Exemplo: Escolher um filme</h2>
-  </hgroup>
-  <article data-timings="">
-    <pre><code class="r">FilmeOk &lt;- function(Nome_Filme){
+<pre><code class="r">FilmeOk &lt;- function(Nome_Filme){
 
   Filme &lt;- Filmes[Filmes$Title == Nome_Filme,]
 
@@ -862,7 +800,25 @@ FilmeOk(&quot;Alien&quot;)
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-38" style="background:;">
+<slide class="" id="slide-35" style="background:;">
+  <hgroup>
+    <h2>Ler dados a partir de ficheiros</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(tidyverse)
+df &lt;- read_csv(&#39;C:/Users/GICpr/Desktop/exemplo.csv&#39;)
+</code></pre>
+
+<p>Exercício 7</p>
+
+<pre><code class="r"># Ler o ficheiro &#39;exemplo.csv&#39; disponível na pasta meetup3
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-36" style="background:;">
   <hgroup>
     <h2>Let&#39;s swirl:</h2>
   </hgroup>
@@ -878,7 +834,7 @@ swirl()
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-39" style="background:;">
+<slide class="" id="slide-37" style="background:;">
   <hgroup>
     <h2>Referências</h2>
   </hgroup>
@@ -894,7 +850,7 @@ swirl()
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-40">
+<slide class="" id="slide-38">
 <hgroup>
   <h2>Onde nos podem encontrar</h2>
 </hgroup>
@@ -910,7 +866,7 @@ swirl()
 </article>
 <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-41" style="background:;">
+<slide class="" id="slide-39" style="background:;">
   <hgroup>
     <h2>Eventos futuros</h2>
   </hgroup>
@@ -924,7 +880,7 @@ swirl()
   <!-- Presenter Notes -->
 </slide>
 
-<slide class="" id="slide-42">
+<slide class="" id="slide-40">
 <hgroup>
   <h2>Agradecimentos</h2>
 </hgroup>
@@ -938,7 +894,7 @@ swirl()
 </article>
 <!-- Presenter Notes -->
 </slide>
-<slide class="" id="slide-43">
+<slide class="" id="slide-41">
 <hgroup>
   <h2>Contactos</h2>
 </hgroup>
@@ -996,7 +952,7 @@ swirl()
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=8 title='Exemplo de base de dados simples'>
+        data-slide=8 title='Tipos de dados'>
          8
       </a>
     </li>
@@ -1008,13 +964,13 @@ swirl()
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=10 title='Tipos de dados'>
+        data-slide=10 title='Atribuir valores a variáveis'>
          10
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=11 title='Atribuir valores a variáveis'>
+        data-slide=11 title='Estrutura de dados'>
          11
       </a>
     </li>
@@ -1068,13 +1024,13 @@ swirl()
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=20 title='Dataframes'>
+        data-slide=20 title='Matrizes'>
          20
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=21 title='Dataframes'>
+        data-slide=21 title='Matrizes'>
          21
       </a>
     </li>
@@ -1128,25 +1084,25 @@ swirl()
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=30 title='Dataframes'>
+        data-slide=30 title='Valores em falta (missing values)'>
          30
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=31 title='Dataframes'>
+        data-slide=31 title='Valores em falta (missing values)'>
          31
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=32 title='Dataframes'>
+        data-slide=32 title='Funções'>
          32
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=33 title='Dataframes'>
+        data-slide=33 title='Funções'>
          33
       </a>
     </li>
@@ -1158,56 +1114,44 @@ swirl()
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=35 title='Funções'>
+        data-slide=35 title='Ler dados a partir de ficheiros'>
          35
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=36 title='Funções'>
+        data-slide=36 title='Let&#39;s swirl:'>
          36
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=37 title='Exemplo: Escolher um filme'>
+        data-slide=37 title='Referências'>
          37
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=38 title='Let&#39;s swirl:'>
+        data-slide=38 title='Onde nos podem encontrar'>
          38
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=39 title='Referências'>
+        data-slide=39 title='Eventos futuros'>
          39
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=40 title='Onde nos podem encontrar'>
+        data-slide=40 title='Agradecimentos'>
          40
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=41 title='Eventos futuros'>
+        data-slide=41 title='Contactos'>
          41
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=42 title='Agradecimentos'>
-         42
-      </a>
-    </li>
-    <li>
-      <a href="#" target="_self" rel='tooltip' 
-        data-slide=43 title='Contactos'>
-         43
       </a>
     </li>
   </ul>
